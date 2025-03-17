@@ -27,6 +27,14 @@ app.get('/fio',(req,res) => {
     res.send('<h1>Крутоголов Александр, группа 11ИС - 322. </h1>')
     })
 
+    app.post('/Create_User', (req, res) => {
+        const { id, login, password, role } = req.body
+        const type = User.create({
+            id, login, password, role
+        });
+        return res.json(type);
+    }) 
+
 async function start() {
     app.listen(PORT, () => {
         console.log(`address http://localhost:${PORT}`)

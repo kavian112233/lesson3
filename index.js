@@ -23,7 +23,9 @@ const User = sequelize.define('users', {
 app.get('/',(req,res) => {
 res.send('<h1>я сделаю 1 задание</h1>')
 })
-
+app.get('/fio',(req,res) => {
+    res.send('<h1>Крутоголов Александр, группа 11ИС - 322. </h1>')
+    })
 
 async function start() {
     app.listen(PORT, () => {

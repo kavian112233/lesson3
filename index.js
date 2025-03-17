@@ -21,11 +21,17 @@ const User = sequelize.define('users', {
     role: { type: DataTypes.STRING, defaultValue: "user" },
 })
 
-    
+    app.post('/Create_User', (req, res) => {
+        const { id, login, password, role } = req.body
+        const type = User.create({
+            id, login, password, role
+        });
+        return res.json(type);
+    }) 
 
 
 async function start() {
-    app.listen(PORT, () => {
+    app.listen(PORT, () => {джд
         console.log(`address http://localhost:${PORT}`)
     })
 }

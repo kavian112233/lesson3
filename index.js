@@ -36,7 +36,6 @@ app.delete('/Delete_User/Delete_ID/:Delete_ID', (req, res) => {
     res.send("Внимание данные удалены!")
 })
 
-
 async function start() {
     app.listen(PORT, () => {
         console.log(`address http://localhost:${PORT}`)

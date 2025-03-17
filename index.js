@@ -30,6 +30,7 @@ async function start() {
         console.log(`address http://localhost:${PORT}`)
     })
 }
+
 sequelize.authenticate();
 sequelize.sync();
 start()

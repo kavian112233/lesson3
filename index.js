@@ -14,12 +14,14 @@ const sequelize = new Sequelize(
         port: "5432"
     }
 )
+
 const User = sequelize.define('users', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     login: { type: DataTypes.STRING, unique: true },
     password: { type: DataTypes.STRING },
     role: { type: DataTypes.STRING, defaultValue: "user" },
 })
+
 app.get('/fio',(req,res) => {
     res.send('<h1>Крутоголов Александр, группа 11ИС - 322. </h1>')
     })

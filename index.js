@@ -29,12 +29,7 @@ app.delete('/Delete_User/Delete_ID/:Delete_ID', (req, res) => {
     res.send("Внимание данные удалены!")
 })
     
-app.delete('/Delete_User/Delete_ID/:Delete_ID', (req, res) => {
-    const { id, login, password, role } = req.body
-    let Delete_ID = Number(req.params.Delete_ID)
-    const type = User.destroy({ where: { id: Delete_ID } });
-    res.send("Внимание данные удалены!")
-})
+
 
 async function start() {
     app.listen(PORT, () => {

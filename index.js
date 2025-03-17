@@ -20,9 +20,11 @@ const User = sequelize.define('users', {
     password: { type: DataTypes.STRING },
     role: { type: DataTypes.STRING, defaultValue: "user" },
 })
+
 app.get('/',(req,res) => {
 res.send('<h1>я сделаю 1 задание</h1>')
 })
+
 app.get('/fio',(req,res) => {
     res.send('<h1>Крутоголов Александр, группа 11ИС - 322. </h1>')
     })
